@@ -1,0 +1,13 @@
+@import 'reset';
+@import 'variables';
+
+html{
+	font-size: $font-size-normal;
+
+	body{
+		font-size: $font-size-normal;
+		font-family: $font-family-roboto;
+		font-weight: $font-weight-normal;
+		-webkit-font-smoothing: antialiased;
+	}
+}
