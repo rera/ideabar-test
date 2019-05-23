@@ -1,0 +1,21 @@
+section {
+  padding: $space-wide 0;
+  width: 1200px;
+
+  @include lg {
+    width: 1024px;
+  }
+  @include md {
+    width: 768px;
+    padding: ($space-wide * 0.5) 0;
+  }
+  @include sm {
+    width: 100%;
+    padding-left: $space-thin;
+    padding-right: $space-thin;
+  }
+  @include xs {
+    padding-left: $space-thin * 0.5;
+    padding-right: $space-thin * 0.5;
+  }
+}

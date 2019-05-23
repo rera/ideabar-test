@@ -1,0 +1,52 @@
+@function font-height-adjust($size) {
+  @return $size - ($font-size-body * 0.25);
+  // Roboto characters only occupy ~75% of line-height
+  // this function subtracts the extra space left when applying paddings
+  // so that it more closely mimics the design comp
+}
+@function psd-letterspacing($size) {
+  @return ($size / 1000) * 1em;
+  // Converts PSD character tracking to CSS letter spacing
+}
+@mixin responsive-font-size($size) {
+  font-size: $size;
+  @include xs {
+    font-size: $size * $font-xs-scale;
+  }
+}
+
+body {
+  font-family: $font-family-roboto;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: psd-letterspacing($font-letterspacing);
+
+  h1 {
+    font-weight: $font-weight-bold;
+    color: $dark-gray;
+    padding-bottom: font-height-adjust($font-size-body);
+    @include responsive-font-size($font-size-headline);
+  }
+  h2 {
+    font-weight: $font-weight-normal;
+    color: $accent;
+    padding-bottom: font-height-adjust($font-size-subhead);
+    @include responsive-font-size($font-size-subhead);
+  }
+  h3 {
+    font-weight: $font-weight-normal;
+    color: $dark-gray;
+    padding-bottom: font-height-adjust($font-size-subhead);
+    @include responsive-font-size($font-size-subhead);
+  }
+  p {
+    font-size: $font-size-body;
+    font-weight: $font-weight-normal;
+    color: $medium-gray;
+    padding-bottom: $font-size-body;
+    line-height: $font-lineheight-body;
+  }
+  a {
+    text-decoration: none;
+    border-bottom: solid 1px $white;
+  }
+}

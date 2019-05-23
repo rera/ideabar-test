@@ -1,0 +1,55 @@
+$footer-icon-width: 60px;
+
+footer {
+  background-color: $light-gray;
+
+  section {
+    display: flex;
+    flex-flow: row;
+    @include md {
+      flex-flow: column;
+      position: relative;
+    }
+
+    article {
+      text-align: center;
+      padding: 0 $space-thin;
+      @include md {
+        text-align: left;
+        padding: 0 0 0 ($footer-icon-width + $font-size-subhead);
+      }
+      @include xs {
+        text-align: center;
+        padding: 0;
+      }
+
+      img {
+        width: $footer-icon-width;
+        @include md {
+          position: absolute;
+          left: 0;
+        }
+        @include sm {
+          left: $space-thin;
+        }
+        @include xs {
+          position: static;
+          padding-bottom: $font-size-body;
+        }
+      }
+      h3 {
+        padding-top: $font-size-subhead;
+        @include md {
+          padding: 0 0 $font-size-body;
+        }
+      }
+      p {
+        padding-bottom: 0;
+        vertical-align: top;
+        @include md {
+          padding-bottom: $font-size-headline;
+        }
+      }
+    }
+  }
+}

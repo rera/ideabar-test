@@ -1,0 +1,48 @@
+$header-height: 500px;
+$header-height-md: 300px;
+$header-height-xs: 200px;
+$header-animation-delay: 0.4s;
+$header-animation-duration: 1.5s;
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+header {
+  background: url("../images/BG-Image.jpg") no-repeat center -120px;
+  background-size: cover;
+  background-attachment: fixed;
+  height: $header-height;
+  @include md {
+    height: $header-height-md;
+  }
+  @include xs {
+    height: $header-height-xs;
+  }
+
+  section {
+    justify-content: left;
+    padding: $space-thin 0;
+
+    animation-name: fade-in;
+    animation-delay: $header-animation-delay;
+    animation-fill-mode: both;
+    animation-duration: $header-animation-duration;
+
+    @include sm {
+      padding-left: $space-thin;
+    }
+    @include xs {
+      padding: (($header-height-xs / 2) - ($space-thin / 2)) 0 0 $space-thin;
+    }
+
+    img {
+      height: $space-thin;
+    }
+  }
+}

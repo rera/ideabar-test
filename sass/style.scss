@@ -1,13 +1,23 @@
-@import 'reset';
-@import 'variables';
+@import "reset";
+@import "variables";
+@import "typography";
+@import "section";
+@import "header";
+@import "main";
+@import "footer";
 
-html{
-	font-size: $font-size-normal;
+html {
+  font-size: $font-size-body;
 
-	body{
-		font-size: $font-size-normal;
-		font-family: $font-family-roboto;
-		font-weight: $font-weight-normal;
-		-webkit-font-smoothing: antialiased;
-	}
+  body {
+    display: flex;
+    flex-direction: column;
+
+    header,
+    footer,
+    main {
+      display: flex;
+      justify-content: center;
+    }
+  }
 }

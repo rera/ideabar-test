@@ -1,11 +1,56 @@
-@import 'https://fonts.googleapis.com/css?family=Roboto:400,500';
-
 // FONTS
-$font-family-roboto: 'Roboto', sans-serif;
-
+@import "https://fonts.googleapis.com/css?family=Roboto:400,500";
+// families
+$font-family-roboto: "Roboto", sans-serif;
 // weights
 $font-weight-normal: 400;
 $font-weight-bold: 500;
-
 // sizes
-$font-size-normal: 16px;
+$font-size-headline: 50px;
+$font-size-subhead: 35px;
+$font-size-body: 20px;
+// misc
+$font-letterspacing: -15;
+$font-lineheight-body: 1.5em;
+$font-size-bullet: 8px;
+
+// COLORS
+$white: #ffffff;
+$dark-gray: #464646;
+$medium-gray: #969aa4;
+$light-gray: #eeeff0;
+$shadow-gray: #9c9ca6;
+$accent: #f27179;
+
+// SPACE
+$space-thin: 50px;
+$space-wide: 150px;
+
+// RESPONSIVE
+$screen-lg-min: 1250px;
+$screen-md-min: 1074px;
+$screen-sm-min: 818px;
+$screen-xs-min: 480px;
+
+$font-xs-scale: 0.8;
+
+@mixin lg {
+  @media (max-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+@mixin md {
+  @media (max-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+@mixin sm {
+  @media (max-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+@mixin xs {
+  @media (max-width: #{$screen-xs-min}) {
+    @content;
+  }
+}
