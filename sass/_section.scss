@@ -1,16 +1,21 @@
+$section-width: 1200px;
+$section-width-lg: 1024px;
+$section-width-md: 768px;
+$section-width-sm: 100%;
+
 section {
   padding: $space-wide 0;
-  width: 1200px;
+  width: $section-width;
 
   @include lg {
-    width: 1024px;
+    width: $section-width-lg;
   }
   @include md {
-    width: 768px;
+    width: $section-width-md;
     padding: ($space-wide * 0.5) 0;
   }
   @include sm {
-    width: 100%;
+    width: $section-width-sm;
     padding-left: $space-thin;
     padding-right: $space-thin;
   }

@@ -1,6 +1,8 @@
 $header-height: 500px;
 $header-height-md: 300px;
 $header-height-xs: 200px;
+$header-background-image: "../images/BG-Image.jpg";
+$header-background-position: center -120px;
 $header-animation-delay: 0.4s;
 $header-animation-duration: 1.5s;
 
@@ -14,7 +16,8 @@ $header-animation-duration: 1.5s;
 }
 
 header {
-  background: url("../images/BG-Image.jpg") no-repeat center -120px;
+  background: url($header-background-image) no-repeat;
+  background-position: $header-background-position;
   background-size: cover;
   background-attachment: fixed;
   height: $header-height;

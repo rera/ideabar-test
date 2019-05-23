@@ -166,7 +166,7 @@ body {
     font-weight: 400;
     color: #969aa4;
     padding-bottom: 20px;
-    line-height: 1.5em; }
+    line-height: 1.5; }
   body a {
     text-decoration: none;
     border-bottom: solid 1px #ffffff; }
@@ -198,7 +198,8 @@ section {
     opacity: 1; } }
 
 header {
-  background: url("../images/BG-Image.jpg") no-repeat center -120px;
+  background: url("../images/BG-Image.jpg") no-repeat;
+  background-position: center -120px;
   background-size: cover;
   background-attachment: fixed;
   height: 500px; }
@@ -270,7 +271,7 @@ main section {
         padding-top: 0; }
       main section aside ul li a {
         color: #ffffff;
-        line-height: 1.5em; }
+        line-height: 1.5; }
 
 footer {
   background-color: #eeeff0; }

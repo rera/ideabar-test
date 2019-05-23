@@ -1,3 +1,8 @@
+$aside-shadow-size: 0 13px 33px 0.33px;
+$aside-shadow-color: transparentize($shadow-gray, 0.7);
+$aside-bullet-size: 8px;
+$aside-bullet-color: transparentize($white, 0.5);
+
 main {
   section {
     display: flex;
@@ -30,7 +35,7 @@ main {
     aside {
       padding: $space-thin;
       background-color: $accent;
-      box-shadow: 0 13px 33px 0.33px transparentize($shadow-gray, 0.7);
+      box-shadow: $aside-shadow-size $aside-shadow-color;
       @include md {
         width: 100%;
       }
@@ -45,14 +50,14 @@ main {
 
           &:before {
             content: "";
-            background-color: transparentize($white, 0.5);
+            background-color: $aside-bullet-color;
             display: inline-block;
-            width: $font-size-bullet;
-            height: $font-size-bullet;
+            width: $aside-bullet-size;
+            height: $aside-bullet-size;
             border-radius: 50%;
             position: absolute;
             left: 0;
-            margin-top: ($font-size-body * 1.5 / 2) - ($font-size-bullet / 2);
+            margin-top: ($font-size-body * $font-lineheight-body / 2) - ($aside-bullet-size / 2);
           }
 
           &:first-of-type {
