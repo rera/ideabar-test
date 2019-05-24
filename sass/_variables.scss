@@ -53,3 +53,10 @@ $screen-xs-scale: 0.8;
     @content;
   }
 }
+
+// COMPATIBILITY
+@mixin ie {
+  @media all and (-ms-high-contrast:none) {
+    @content;
+  }
+}

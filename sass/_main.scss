@@ -10,6 +10,9 @@ main {
     display: flex;
     flex-flow: row;
     align-items: flex-start;
+    @include ie {
+      align-items: stretch;
+    }
 
     @include md {
       flex-flow: column;

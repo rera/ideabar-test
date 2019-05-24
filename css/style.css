@@ -230,6 +230,9 @@ main section {
   display: flex;
   flex-flow: row;
   align-items: flex-start; }
+  @media all and (-ms-high-contrast: none) {
+    main section {
+      align-items: stretch; } }
   @media (max-width: 1074px) {
     main section {
       flex-flow: column; } }
