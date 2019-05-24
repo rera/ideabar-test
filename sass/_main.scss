@@ -3,6 +3,8 @@ $aside-shadow-color: transparentize($shadow-gray, 0.7);
 $aside-bullet-size: 8px;
 $aside-bullet-color: transparentize($white, 0.5);
 
+$article-width: 66%;
+
 main {
   section {
     display: flex;
@@ -14,7 +16,7 @@ main {
     }
 
     article {
-      flex: 0 0 66%;
+      flex: 0 0 $article-width;
       padding-right: $space-wide;
 
       @include md {
@@ -40,7 +42,7 @@ main {
         width: 100%;
       }
       @include xs {
-        padding: $space-thin * 0.8;
+        padding: $space-thin * $screen-xs-scale;
       }
 
       ul {

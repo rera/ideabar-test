@@ -11,7 +11,7 @@
 @mixin responsive-font-size($size) {
   font-size: $size;
   @include xs {
-    font-size: $size * $font-xs-scale;
+    font-size: $size * $screen-xs-scale;
   }
 }
 

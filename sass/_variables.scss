@@ -12,7 +12,6 @@ $font-size-body: 20px;
 // misc
 $font-letterspacing: -15;
 $font-lineheight-body: 1.5;
-$font-xs-scale: 0.8;
 
 // COLORS
 $white: #ffffff;
@@ -31,6 +30,8 @@ $screen-lg-min: 1250px;
 $screen-md-min: 1074px;
 $screen-sm-min: 818px;
 $screen-xs-min: 480px;
+
+$screen-xs-scale: 0.8;
 
 @mixin lg {
   @media (max-width: #{$screen-lg-min}) {
